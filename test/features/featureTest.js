@@ -16,7 +16,14 @@ describe("Interface", function() {
     browser.assert.text('title', 'To Do List');
   });
 
-  // it('can see to do items', function() {
-  //   browser.assert.text('body', 'Eat breakfast');
-  // });
+  it('has a form to add a task', function() {
+    browser.assert.element('form');
+  });
+
+  it('can add task to the list', function() {
+    browser.fill('task', 'call nan');
+    browser.pressButton('Add task');
+    browser.assert.text('.list', 'call nan');
+  });
+
 });

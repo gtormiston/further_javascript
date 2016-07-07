@@ -1,19 +1,23 @@
-var ToDoItem = require("../models/toDoItem");
 
-function ToDoList() {
+(function (exports) {
+
+function ToDoList(ToDoItem) {
   this.tasks = [];
+  this.ToDoItem = ToDoItem;
 }
 
 ToDoList.prototype.addTask = function(taskString) {
-  this.tasks.push(new ToDoItem(taskString));
+  this.tasks.push(new this.ToDoItem(taskString));
 };
 
 ToDoList.prototype.display = function() {
   var returnString = "<ul>";
   this.tasks.forEach(function(task) {
-    returnString += ("<li><div>"+task.task+"</div></li>");
+    returnString += ("<li>"+task.task+"</li>");
   });
   return returnString += "</ul>";
 };
 
-module.exports = ToDoList
+exports.ToDoList = ToDoList;
+
+})(this);

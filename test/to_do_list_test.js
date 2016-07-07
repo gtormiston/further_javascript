@@ -1,11 +1,12 @@
 var expect = require("chai").expect;
-var ToDoList = require("../models/toDoList");
+var ToDoList = require("../models/toDoList").ToDoList;
 var toDoList;
+var ToDoItem = require("../models/toDoItem").ToDoItem;
 
 describe ("ToDoList", function() {
 
   beforeEach(function() {
-    toDoList = new ToDoList();
+    toDoList = new ToDoList(ToDoItem);
   });
 
   it("object is instantiated with with an array to store to do objects", function() {
@@ -24,7 +25,7 @@ describe ("ToDoList", function() {
     it("displays a to do list in html format", function() {
       toDoList.addTask("Eat breakfast");
       toDoList.addTask("Eat lunch");
-      expect(toDoList.display()).to.equal("<ul><li><div>Eat breakfast</div></li><li><div>Eat lunch</div></li></ul>");
+      expect(toDoList.display()).to.equal("<ul><li>Eat breakfast</li><li>Eat lunch</li></ul>");
     });
   });
 

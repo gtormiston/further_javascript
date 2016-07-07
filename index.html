@@ -3,8 +3,14 @@
   <title>To Do List</title>
   <script src="models/toDoItem.js"></script>
   <script src="models/toDoList.js"></script>
-  <script ></script>
 </head>
-<body>hello
+<body>
+  <h1>To Do List</h1>
+  <form method="post" action="/tasks/new" id="task_form">
+   <input type="text" id="task_description" placeholder, name="task" autocomplete="off" required>
+   <button type="submit">Add task</button>
+  </form>
+  <div class="list"></div>
 </body>
+ <script src="./index.js"></script>
 </html>

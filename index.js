@@ -1,3 +1,11 @@
-// var ToDoList = require("../models/toDoList");
+var list = new ToDoList(ToDoItem);
 
-// var toDoList = new ToDoList();
+document.querySelector(".list").innerHTML = list.display();
+
+document.querySelector("#task_form").addEventListener("submit", function (event, data) {
+  event.preventDefault();
+
+  list.addTask(document.querySelector("#task_description").value);
+  document.querySelector(".list").innerHTML = list.display();
+  document.querySelector("#task_description").value = "";
+});

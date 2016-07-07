@@ -1,10 +1,10 @@
 
 var expect = require("chai").expect;
-var ToDoItem = require("../models/toDoItem");
+var ToDoItem = require("../models/toDoItem").ToDoItem;
 var toDoItem;
 
 describe ("ToDoItem", function() {
-  
+
   beforeEach(function() {
     toDoItem = new ToDoItem();
   });
