@@ -19,7 +19,4 @@ ToDoItem.prototype.checkComplete = function() {
   return this.isComplete;
 };
 
-// module.exports = ToDoItem
-
-
-
+module.exports = ToDoItem

@@ -1,4 +1,4 @@
-// var ToDoItem = require("../models/toDoItem");
+var ToDoItem = require("../models/toDoItem");
 
 function ToDoList() {
   this.tasks = [];
@@ -16,5 +16,4 @@ ToDoList.prototype.display = function() {
   return returnString += "</ul>";
 };
 
-// module.exports = ToDoList
-
+module.exports = ToDoList
