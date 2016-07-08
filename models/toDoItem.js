@@ -1,8 +1,8 @@
 (function (exports) {
   var idCounter = 0
-function ToDoItem(task) {
+function ToDoItem(task, isComplete) {
   this.task = typeof task === 'undefined' ? "" : task;
-  this.isComplete = false;
+  this.isComplete = typeof isComplete === 'undefined' ? false : isComplete;
   this.id = idCounter++;
 };
 

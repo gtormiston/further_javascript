@@ -6,14 +6,14 @@ function ToDoList(ToDoItem) {
   this.ToDoItem = ToDoItem;
 }
 
-ToDoList.prototype.addTask = function(taskString) {
-  this.tasks.push(new this.ToDoItem(taskString));
+ToDoList.prototype.addTask = function(taskString, taskCompletion) {
+  this.tasks.push(new this.ToDoItem(taskString, taskCompletion));
 };
 
 ToDoList.prototype.display = function() {
   var returnString = "<ul>";
   this.tasks.forEach(function(task) {
-    returnString += ("<li id='" + task.id + "'><a onclick='changeStatus(" + task.id +  ")'>" + task.task + "</a></li>");
+    returnString += ("<li id='" + task.id + "'><a class='" + task.isComplete + "' onclick='changeStatus(" + task.id +  ")'>" + task.task + "</a></li>");
   });
   return returnString += "</ul>";
 };
