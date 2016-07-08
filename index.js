@@ -15,4 +15,9 @@ function changeStatus(task) {
   var currentItem = list.findItemById(task);
   currentItem.reverseStatus();
   console.log(currentItem);
+  if (currentItem.isComplete) {
+    document.getElementById(currentItem.id).style.textDecoration = 'line-through';
+  } else {
+    document.getElementById(currentItem.id).style.textDecoration = 'none';
+  }
 }

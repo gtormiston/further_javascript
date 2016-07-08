@@ -25,7 +25,7 @@ describe ("ToDoList", function() {
     it("displays a to do list in html format", function() {
       toDoList.addTask("Eat breakfast");
       toDoList.addTask("Eat lunch");
-      expect(toDoList.display()).to.equal("<ul><li>Eat breakfast</li><li>Eat lunch</li></ul>");
+      expect(toDoList.display()).to.equal("<ul><li id='7'><a onclick='changeStatus(7)'>Eat breakfast</a></li><li id='8'><a onclick='changeStatus(8)'>Eat lunch</a></li></ul>");
     });
   });
 

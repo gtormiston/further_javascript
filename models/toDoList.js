@@ -13,7 +13,7 @@ ToDoList.prototype.addTask = function(taskString) {
 ToDoList.prototype.display = function() {
   var returnString = "<ul>";
   this.tasks.forEach(function(task) {
-    returnString += ("<li>"+task.task+"<button id='complete' onclick='changeStatus(" + task.id +  ")'>completed?</button></li>");
+    returnString += ("<li id='" + task.id + "'><a onclick='changeStatus(" + task.id +  ")'>" + task.task + "</a></li>");
   });
   return returnString += "</ul>";
 };

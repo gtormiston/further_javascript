@@ -44,8 +44,8 @@ describe ("ToDoItem", function() {
 
   describe ("#changeStatus", function() {
     it("changes the isComplete status", function() {
-      toDoItem.changeStatus();
-      toDoItem.changeStatus();
+      toDoItem.reverseStatus();
+      toDoItem.reverseStatus();
       expect(toDoItem.checkComplete()).to.equal(false);
     });
   });
